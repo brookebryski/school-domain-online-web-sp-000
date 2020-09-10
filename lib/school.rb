@@ -1,16 +1,22 @@
 # code here!
 class School
+
+  attr_reader :name, :roster
+
   def initialize(name)
     @name = name
+    @roster = {}
   end
 
-  roster["name"] = []
-  roster["name"] << "grade"
-
-  roster
-  => {"name" => ["grade"]}
-
   def add_student(name, grade)
+    if @roster.has_key?(grade)
+      @roster[grade] << name
+    else
+    @roster[grade] = [name]
+  end
+
+  def grade(num)
+
   end
 
 end
