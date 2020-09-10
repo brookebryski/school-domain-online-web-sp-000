@@ -24,5 +24,4 @@ def sort
     students.sort
   end
 end
-
 end
